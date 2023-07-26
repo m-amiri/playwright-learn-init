@@ -22,3 +22,44 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+out/
+
+# Maven
+target/
+pom.xml.lock
+release.properties
+
+# Playwright
+playwright-logs/
+test-results/
+
+# JUnit5
+junit-platform-console-standalone-*.jar
+junit-jupiter-params/
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Miscellaneous
+.DS_Store
