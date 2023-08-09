@@ -1,4 +1,3 @@
-import com.microsoft.playwright.*;
 import org.junit.jupiter.api.Test;
 
 public class FirstTest extends PlaywrightRunner{

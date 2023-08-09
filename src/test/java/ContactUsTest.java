@@ -5,7 +5,7 @@ public class ContactUsTest extends PlaywrightRunner{
     public void contactUsTest() {
         homePage.navigate();
         homePage.navigateToContactUs();
-        contactUsPage.fillForm();
+        contactUsPage.fillForm(getProperty("fullName"), getProperty("email"), getProperty("phone"));
 
         System.out.println();
     }

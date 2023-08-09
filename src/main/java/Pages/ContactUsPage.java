@@ -1,4 +1,5 @@
 package Pages;
+
 import com.microsoft.playwright.Page;
 
 import java.util.regex.Pattern;
@@ -19,13 +20,14 @@ public class ContactUsPage {
         this.contactUsPage = page;
     }
 
-    public void fillForm() {
+    public void fillForm(String fullName, String email, String phone) {
         contactUsPage.locator(CATEGORY).click();
         contactUsPage.locator(TOPIC).click();
-        assertThat(contactUsPage.locator(REGISTER_BUTTON)).hasClass(Pattern.compile(".*styles_btn--disabled.*"));
-        contactUsPage.locator(FULL_NAME).fill("Mahdi Amiri");
-        contactUsPage.getByLabel(EMAIL).fill("amiri@gmail.com");
-        contactUsPage.locator(PHONE).fill("09123456789");
+        assertThat(contactUsPage.locator(REGISTER_BUTTON))
+                .hasClass(Pattern.compile(".*styles_btn--disabled.*"));
+        contactUsPage.locator(FULL_NAME).fill(fullName);
+        contactUsPage.getByLabel(EMAIL).fill(email);
+        contactUsPage.locator(PHONE).fill(phone);
         contactUsPage.locator(MESSAGE_BOX).fill("The prices in digikala are very EXPENSIVE");
         assertThat(contactUsPage.locator(REGISTER_BUTTON)).not().hasClass(Pattern.compile(".*styles_btn--disabled.*"));
     }

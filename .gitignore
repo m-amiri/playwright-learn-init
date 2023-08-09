@@ -63,3 +63,5 @@ bin/
 
 # Miscellaneous
 .DS_Store
+/videos/
+/traces/
